@@ -1,0 +1,12 @@
+
+// Default variable overrides
+$primary : #FDC000; //default값 오버라이드로 바꾸기
+
+// Required
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
