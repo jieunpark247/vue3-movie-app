@@ -108,5 +108,23 @@ export default {
       font-weight: 700;
       flex-shrink: 0; //감소하지 않는다. 너비 무조건 120px
   }
+  @include media-breakpoint-down(lg) {
+    //lg보다 작은경우
+    display: block; //flex를 block으로 바꾼다.
+    input {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+    .selects {
+      margin-right: 0;
+      margin-bottom: 10px;
+      select {
+        width: 100%;
+      }
+    }
+    .btn {
+      width: 100%;
+    }
+  }
 }
 </style>

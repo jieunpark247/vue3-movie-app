@@ -4,7 +4,7 @@
         <a 
             href="https://github.com/jieunpark247"
             target="_blank">
-            (c){{ new Date().getFullYear() }} HEROPY
+            (c){{ new Date().getFullYear() }} JIEUN
             </a>
     </footer>
 </template>
