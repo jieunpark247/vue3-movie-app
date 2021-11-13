@@ -81,6 +81,7 @@
 
 <script>
 import Loader from '~/components/Loader'
+import { mapState, mapActions } from 'vuex'
 
 export default {
   components: {
@@ -92,20 +93,22 @@ export default {
     }
   },
   computed: {
-    theMovie(){
-      return this.$store.state.movie.theMovie
-    },
-    loading(){
-      return this.$store.state.movie.loading
-    }
+      ...mapState('movie', [
+        'theMovie',
+        'loading'
+      ]),
   },
   created(){
     console.log(this.$route)
+    //  this.searchMoviesWithId { //mapActions등록해서 써도 된다.
     this.$store.dispatch('movie/searchMoviesWithId', {
       id: this.$route.params.id
     })
   },
   methods: {
+    // ...mapActions('movie', [
+    //   'searchMoviesWithId'
+    // ]),
     requestDiffSizeImage(url, size = 700){
       if(!url || url === 'N/A'){
         this.imageLoading = false
